@@ -1,2 +1,6 @@
-{}
+language:
+  layoutsFolderPath: layouts/
+  currentLayout: en
+  layouts:
+  - en
 

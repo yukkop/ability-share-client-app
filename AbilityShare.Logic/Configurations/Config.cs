@@ -6,6 +6,7 @@ using AbilityShare.Logic.Configurations.Models;
 
 namespace AbilityShare.Logic.Configurations;
 
+// TODO система приведения версий конфига и настроек
 public class Config // TODO разделить этот класс на статический класс и модель с конфигурацииями (ConfigModel)
 {
     private static Config? _mainConfig;
