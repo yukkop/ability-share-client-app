@@ -6,13 +6,14 @@ using AbilityShare.Logic.Configurations.Models;
 
 namespace AbilityShare.Logic.Configurations;
 
-public class Config
+public class Config // TODO разделить этот класс на статический класс и модель с конфигурацииями (ConfigModel)
 {
     private static Config? _mainConfig;
 
     /// <summary>
     /// Singleton конфигураций
     /// </summary>
+    // TODO подумать о том как можно инициализировать конфиг по его вызову, более красиво, не вызывая рекурсий из-за логера
     public static Config MainConfig => _mainConfig ??= Config.Load(); // Если конфиг еще не создан (_mainConfig == null)
                                                                       // То вызываеться метод Config.Load()
 
@@ -22,12 +23,18 @@ public class Config
     public static readonly string ConfigPath = "config.yaml";
 
     /// <summary>
+    /// Путь к файлу с настройками
+    /// </summary>
+    public string PreferencesPath;
+
+    /// <summary>
     /// Конфигурации Логгера
     /// </summary>
     public LoggerModel Logger;
 
     public Config()
     {
+        PreferencesPath = "preferences.yaml";
         Logger = new LoggerModel
         {
             IsConsoleLogEnable = false

@@ -2,7 +2,9 @@
 using AbilityShare.Logic.Configurations;
 using printer = System.Console;
 
-Logger.Log("> Start new seance:"); // Первый лог инициализирует конфиг
+Logger.Log("> Start new seance:"); // Первый лог инициализирует конфиг | test функции Config.Load()
+
+var preferences = Preferences.MainPreferences; // Только ради того что бы протестировать вызов настроек (Preferences.Load())
 
 await Test();
 
