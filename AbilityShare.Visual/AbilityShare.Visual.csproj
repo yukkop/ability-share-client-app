@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../Logic/Logic.csproj" />
+    <ProjectReference Include="../AbilityShare.Logic/AbilityShare.Logic.csproj" />
   </ItemGroup>
   
 </Project>

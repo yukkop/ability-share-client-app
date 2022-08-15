@@ -1,6 +1,6 @@
-﻿using Logic;
+﻿using AbilityShare.Logic.Services;
 using printer = System.Console;
 
-var reqMachine = new Logic.ActivePlayerData();
-await reqMachine.GetPlayerData();
+var reqMachine = new PlayerDataService();
+`await reqMachine.GetPlayerData();
 printer.WriteLine(reqMachine.status);

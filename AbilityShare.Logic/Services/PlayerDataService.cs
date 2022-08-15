@@ -1,7 +1,7 @@
 ﻿using RestSharp;
 using Newtonsoft.Json;
 using System.Threading;
-using AbilityShare.Logic.Services;
+using AbilityShare.Logic.Models;
 
 
 namespace AbilityShare.Logic.Services;
