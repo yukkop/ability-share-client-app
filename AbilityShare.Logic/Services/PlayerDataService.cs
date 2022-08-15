@@ -1,10 +1,11 @@
 ﻿using RestSharp;
 using Newtonsoft.Json;
 using System.Threading;
+using AbilityShare.Logic.Services;
 
 
-namespace Logic;
-public class ActivePlayerData
+namespace AbilityShare.Logic.Services;
+public class PlayerDataService
 {
     public string status = "";
 
@@ -19,7 +20,5 @@ public class ActivePlayerData
         var response = await client.ExecuteAsync<PlayerDataModel>(request);
         var model = JsonConvert.DeserializeObject<PlayerDataModel>(response.Content);
         Console.WriteLine(model);
-
     }
-
 }
