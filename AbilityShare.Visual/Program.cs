@@ -1,4 +1,4 @@
-﻿using AbilityShare.Logic.Services;
+using AbilityShare.Logic.Services;
 using AbilityShare.Logic.Configurations;
 using AbilityShare.Visual.Layout;
 using printer = System.Console;
