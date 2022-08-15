@@ -9,7 +9,7 @@ public class PlayerDataService
 {
     public string status = "";
 
-    public async Task GetPlayerData()
+    public async Task<PlayerDataModel?> GetPlayerData()
     {
         var options = new RestClientOptions("https://127.0.0.1:2999/liveclientdata/activeplayer/")
         {
@@ -18,7 +18,11 @@ public class PlayerDataService
         var client = new RestClient(options);
         var request = new RestRequest();
         var response = await client.ExecuteAsync<PlayerDataModel>(request);
-        var model = JsonConvert.DeserializeObject<PlayerDataModel>(response.Content);
-        Console.WriteLine(model);
+
+        PlayerDataModel? model = null;
+        if (response.Content != null)
+            model = JsonConvert.DeserializeObject<PlayerDataModel>(response.Content);
+
+        return model;
     }
 }
